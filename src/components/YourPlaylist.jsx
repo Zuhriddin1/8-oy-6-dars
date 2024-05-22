@@ -24,29 +24,29 @@ function YourPlaylist(props) {
     background-color: #9992;
     width: 225px;
   `;
-  function handleClick() {
-    navigate("playlist/");
-  }
+  // function handleClick() {
+  //   navigate(`playlists/${token}`);
+  // }
   return (
-    <div onClick={handleClick}>
-      <CardWrapper>
-        <img width={182} src={props.data.images[0].url} alt="" />
-        <div>
-          <h2>{props.data.name}</h2>
-          {isExpanded ? (
-            <FullText>{props.data.description}</FullText>
-          ) : (
-            <TruncatedText>{props.data.description}</TruncatedText>
-          )}
-          <span
-            onClick={handleToggle}
-            style={{ color: "blue", cursor: "pointer" }}
-          >
-            {isExpanded ? "Read less" : "Read more"}
-          </span>
-        </div>
-      </CardWrapper>
-    </div>
+    // <div onClick={handleClick}>
+    <CardWrapper>
+      <img width={182} src={props.data.images[0].url} alt="" />
+      <div>
+        <h2>{props.data.name}</h2>
+        {isExpanded ? (
+          <FullText>{props.data.description}</FullText>
+        ) : (
+          <TruncatedText>{props.data.description}</TruncatedText>
+        )}
+        <span
+          onClick={handleToggle}
+          style={{ color: "blue", cursor: "pointer" }}
+        >
+          {isExpanded ? "Read less" : "Read more"}
+        </span>
+      </div>
+    </CardWrapper>
+    // </div>
   );
 }
 export default YourPlaylist;
