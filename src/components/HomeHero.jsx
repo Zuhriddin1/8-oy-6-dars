@@ -9,8 +9,8 @@ const HeroContainer = styled.div`
   background: linear-gradient(135deg, #2a0e9a, #1b006a);
   color: #ffffff;
   padding: 20px;
-  width: 100%;
-  margin-left: 50px;
+  width: 90%;
+  margin-left: 80px;
   border-radius: 10px;
 `;
 const Header = styled.div`

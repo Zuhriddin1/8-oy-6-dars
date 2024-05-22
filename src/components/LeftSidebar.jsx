@@ -11,9 +11,10 @@ import {
 
 const SidebarWrapper = styled.div`
   width: 17%;
-  height: 100vh;
+  height: 5500px;
   background-color: #000;
   color: #b3b3b3;
+  position: fixed;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -22,12 +23,6 @@ const SidebarWrapper = styled.div`
 
 const Section = styled.div`
   margin-bottom: 20px;
-`;
-
-const SectionTitle = styled.h2`
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 10px;
 `;
 
 const StyledLink = styled(Link)`

@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import LeftSidebar from "../components/LeftSidebar";
 import RightSidebar from "../components/RightSidebar";
+
 function Layouts({ children }) {
   const LayoutWrapper = styled.div`
     display: flex;
@@ -21,4 +22,5 @@ function Layouts({ children }) {
     </LayoutWrapper>
   );
 }
+
 export default Layouts;
