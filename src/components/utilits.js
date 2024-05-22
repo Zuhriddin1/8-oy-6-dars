@@ -6,17 +6,14 @@ async function getToken() {
     const dateObject = new Date(formattedDate);
     return dateObject.getTime();
   }
-
   function isExpireToken(expireDate) {
     if (!expireDate) return true;
     const currentDate = Date.now();
     const expDate = timestamp(expireDate);
     return expDate < currentDate;
   }
-
   const expireDate = localStorage.getItem("expireDate");
   const token = localStorage.getItem("token");
-
   if (!expireDate || !token || isExpireToken(expireDate)) {
     try {
       const resp = await fetch(import.meta.env.VITE_API_TOKEN_URL, {
@@ -31,11 +28,9 @@ async function getToken() {
         },
         body: "grant_type=client_credentials",
       });
-
       if (!resp.ok) {
         throw new Error(`HTTP error! status: ${resp.status}`);
       }
-
       const auth = await resp.json();
       const newExpireDate = getFormattedDateOneHourLater();
       localStorage.setItem("token", auth.access_token);
