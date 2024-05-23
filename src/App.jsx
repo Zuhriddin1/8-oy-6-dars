@@ -18,7 +18,8 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [dispatch]);
+
   return (
     <div>
       <Routes>
@@ -26,28 +27,29 @@ function App() {
           path="/"
           element={
             <Layouts>
-              <Home></Home>
+              <Home />
             </Layouts>
           }
-        ></Route>
+        />
         <Route
           path="/likes"
           element={
             <Layouts>
-              <Likes></Likes>
+              <Likes />
             </Layouts>
           }
-        ></Route>
+        />
         <Route
-          path="/playlist/:id"
+          path="/playlists/:id"
           element={
             <Layouts>
-              <Musics></Musics>
+              <Musics />
             </Layouts>
           }
-        ></Route>
+        />
       </Routes>
     </div>
   );
 }
+
 export default App;
